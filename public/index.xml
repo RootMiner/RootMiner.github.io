@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>rootminer</title><link>http://localhost:1313/</link><description>Recent content on rootminer</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>http://localhost:1313/api-testing/graphql/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/api-testing/graphql/</guid><description> GraphQL APIs unlike REST API, graphql allows requesting many resources in one request, instead of making many requests for each type. graphql used in facebook since 2012 and then opensourced in 2015. graphql uses a simple JSON-like syntax for querying data. graphql always uses POST request. GraphQL Terms query: a query operation on an object or type mutate: update operation on an object type: type of object like a class or table schema: describes the types, fields and actions available</description><content>
+&lt;h1 id="graphql-apis">
+GraphQL APIs
+&lt;a href="#graphql-apis" class="hanchor" ariaLabel="Anchor">&lt;/a>
+&lt;/h1>
+&lt;ul>
+&lt;li>unlike REST API, graphql allows requesting many resources in one request, instead of making many requests for each type.&lt;/li>
+&lt;li>graphql used in facebook since 2012 and then opensourced in 2015.&lt;/li>
+&lt;li>graphql uses a simple JSON-like syntax for querying data.&lt;/li>
+&lt;li>graphql always uses POST request.&lt;/li>
+&lt;/ul>
+&lt;h3 id="graphql-terms">
+GraphQL Terms
+&lt;a href="#graphql-terms" class="hanchor" ariaLabel="Anchor">&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>query&lt;/strong>: a query operation on an object or type&lt;/li>
+&lt;li>&lt;strong>mutate&lt;/strong>: update operation on an object&lt;/li>
+&lt;li>&lt;strong>type&lt;/strong>: type of object like a class or table&lt;/li>
+&lt;li>&lt;strong>schema&lt;/strong>: describes the types, fields and actions available&lt;/li>
+&lt;/ul></content></item><item><title/><link>http://localhost:1313/api-testing/rest/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/api-testing/rest/</guid><description>REST APIs REST: Representational State Transfer is an architecture for HTTP web services
+REST APIs usually follow the URL convention
+Like: /version/class/bject-id/function Eg. /v1/user/120/details REST APIs are usually represented as JSON objects in both requests and responses. Can also use other representation like XML. but rarely REST APIs use HTTP method to determine what to do: GET, POST, DELETE postman is good tool for API testing
+finding REST APIs endpoints reverse engineering mobile apps to find such endpoints the web interface might use a different web API from the mobile version Caching in REST APIs GET requests should be cachable by default – until a special condition arises.</description><content>
+&lt;h1 id="rest-apis">
+REST APIs
+&lt;a href="#rest-apis" class="hanchor" ariaLabel="Anchor">&lt;/a>
+&lt;/h1>
+&lt;p>REST: &lt;strong>Representational State Transfer&lt;/strong> is an architecture for HTTP web services&lt;/p>
+&lt;p>REST APIs usually follow the URL convention&lt;/p>
+&lt;ul>
+&lt;li>Like: &lt;code>/version/class/bject-id/function&lt;/code>
+&lt;ul>
+&lt;li>Eg. &lt;code>/v1/user/120/details&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>REST APIs are usually represented as JSON objects in both requests and responses.
+&lt;ul>
+&lt;li>Can also use other representation like XML. but rarely&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>REST APIs use HTTP method to determine what to do: &lt;code>GET, POST, DELETE&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>postman&lt;/strong> is good tool for API testing&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="finding-rest-apis-endpoints">
+finding REST APIs endpoints
+&lt;a href="#finding-rest-apis-endpoints" class="hanchor" ariaLabel="Anchor">&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>reverse engineering mobile apps to find such endpoints
+&lt;ul>
+&lt;li>the web interface might use a different web API from the mobile version&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="caching-in-rest-apis">
+Caching in REST APIs
+&lt;a href="#caching-in-rest-apis" class="hanchor" ariaLabel="Anchor">&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>GET&lt;/strong> requests should be cachable by default – until a special condition arises. Usually, browsers treat all GET requests as cacheable.&lt;/li>
+&lt;li>&lt;strong>POST&lt;/strong> requests are not cacheable by default but can be made cacheable if either an &lt;code>Expires&lt;/code> header or a &lt;code>Cache-Control&lt;/code> header with a directive, to explicitly allows caching, is added to the response.&lt;/li>
+&lt;li>Responses to &lt;code>PUT&lt;/code> and &lt;code>DELETE&lt;/code> requests are not cacheable at all.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>cache control headers:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Expires: Fri, 20 May 2016 19:20:49 GMT&lt;/code>
+&lt;ul>
+&lt;li>specifies an absolute expiry time&lt;/li>
+&lt;li>note that HTTP dates are always expressed in GMT, never in local time.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>Cache-Control: max-age=3600&lt;/code>
+&lt;ul>
+&lt;li>The header value comprises one or more comma-separated directives. These directives determine whether a response is cacheable, and if so, by whom, and for how long e.g. max-age or s-maxage directives.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>ETag: &amp;quot;abcd1234567n34jv&amp;quot;&lt;/code>
+&lt;ul>
+&lt;li>An &lt;em>ETag&lt;/em> value is an opaque string token that a server associates with a resource to uniquely identify the state of the resource over its lifetime.&lt;/li>
+&lt;li>If the resource at a given URL changes, a new &lt;code>Etag&lt;/code> value &lt;em>must&lt;/em> be generated. A comparison of them can determine whether two representations of a resource are the same. If both values match the server sends back a &lt;code>304&lt;/code> &lt;code>Not Modified&lt;/code> status, without a body, which tells the client that the cached version of the response is still good to use (&lt;em>fresh&lt;/em>).&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>Last-Modified: Fri, 10 May 2016 09:17:49 GMT&lt;/code>
+&lt;ul>
+&lt;li>Whereas a response’s &lt;em>Date&lt;/em> header indicates when the response was generated, the &lt;em>Last-Modified&lt;/em> header indicates when the associated resource was last changed.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></content></item><item><title/><link>http://localhost:1313/api-testing/soap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/api-testing/soap/</guid><description> SOAP APIs SOAP: Simple Object Access Protocol
+oldest of the bunch based on xml SOAP API definition (WSDL(Web Services Description Language) file). similar to HTML, HTML can be considered a type of XML SOAP does not support caching</description><content>
+&lt;h1 id="soap-apis">
+SOAP APIs
+&lt;a href="#soap-apis" class="hanchor" ariaLabel="Anchor">&lt;/a>
+&lt;/h1>
+&lt;p>SOAP: &lt;strong>Simple Object Access Protocol&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>oldest of the bunch&lt;/li>
+&lt;li>based on xml&lt;/li>
+&lt;li>SOAP API definition (WSDL(Web Services Description Language) file).&lt;/li>
+&lt;li>similar to HTML, HTML can be considered a type of XML&lt;/li>
+&lt;li>SOAP does not support caching&lt;/li>
+&lt;/ul></content></item></channel></rss>
